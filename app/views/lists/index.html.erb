@@ -5,10 +5,12 @@
 
   <div class="row d-flex justify-content-center">
     <% @lists.each do |list| %>
+      <%= link_to list_path(list), class:'link-index' do %>
       <div class="col-sm-12 col-md-3">
         <%= list.name %>
           <%= cl_image_tag list.photo.key, class: "d-block w-100" %>
       </div>
+      <% end %>
     <% end %>
   </div>
 </div>
