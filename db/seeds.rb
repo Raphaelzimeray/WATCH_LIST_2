@@ -10,6 +10,8 @@ require 'faker'
 
 
 Movie.destroy_all
+List.destroy_all
+Bookmark.destroy_all
 
 puts 'Creating 10 fake movies...'
 
@@ -26,5 +28,11 @@ puts 'Creating 10 fake movies...'
   )
   movie.save!
 end
+
+puts 'creating 5 lists'
+
+drame = URI.open('https://gold-n-blog.fr/wp-content/uploads/2015/02/Titanic_affiche_film-270x340.jpg')
+drame.photo.attach(io: file, filename: 'titanic.webp', content_type: 'titanic/webp')
+
 
 puts 'finished'
