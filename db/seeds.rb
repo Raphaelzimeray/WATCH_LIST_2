@@ -8,10 +8,23 @@
 
 require 'faker'
 
-Faker::Movie.title
 
-Faker::Book.genre
+Movie.destroy_all
 
-Faker::Music.key
+puts 'Creating 10 fake movies...'
 
-Faker::Number.number(digits: 2)
+10.times do
+
+  movie = Movie.new(
+    title: Faker::Movie.title,
+
+    overview: Faker::Book.genre,
+
+    poster_url: Faker::Music.key,
+
+    rating: rand(0..10)
+  )
+  movie.save!
+end
+
+puts 'finished'
