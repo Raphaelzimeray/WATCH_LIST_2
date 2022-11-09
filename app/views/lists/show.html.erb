@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="h1-show-list">
+    <h1 class="show-du-films">Voici les films </h1>
+  </div>
+
+   <div class="row d-flex justify-content-center">
+      <div class="col-sm-12 col-md-3">
+        <%= @list.name %>
+          <%= cl_image_tag @list.photo.key, class: "d-block w-100" %>
+      </div>
+  </div>
+
+</div>

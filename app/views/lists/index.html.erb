@@ -1,14 +1,16 @@
 <div class="container">
   <div class="h1-index-list">
-    <h1 class="liste-des-films">Liste des films</h1>
+    <h1 class="liste-des-films">Liste des styles de films</h1>
   </div>
 
-  <div class="row d-flex justify-content-center">
+  <div class="div-de-la-photo-et-du-nom-de-la-liste">
     <% @lists.each do |list| %>
-      <div class="col-sm-12 col-md-3">
+      <%= link_to list_path(list), class:'link-index' do %>
+      <div class="photos-and-name-list">
         <%= list.name %>
-          <%= cl_image_tag list.photo.key, class: "d-block w-100" %>
+          <%= cl_image_tag list.photo.key, class:"image-list"%>
       </div>
+      <% end %>
     <% end %>
   </div>
 </div>
