@@ -1,0 +1,32 @@
+.h1-nouvelle-liste{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nouvelle-liste{
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.formulaire-div-parente{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formulaire-new-list{
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.bouton-de-formulaire-liste{
+  color:black;
+  background-color: bisque;
+}
