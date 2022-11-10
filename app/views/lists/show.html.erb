@@ -10,4 +10,16 @@
       </div>
   </div>
 
+    <div class="row d-flex justify-content-center">
+      <div class="bookmarks-all">
+          <% @list.bookmarks.each do |bookmark| %>
+            <%= bookmark.comment %>
+            <%= link_to "Supprimer",
+              bookmark_path(bookmark),
+              method: :delete,
+              data: { confirm: "Are you sure?"},
+              class:"btn btn-primary" %>
+          <% end %>
+      </div>
+    </div>
 </div>
