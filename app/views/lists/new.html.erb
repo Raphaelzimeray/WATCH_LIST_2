@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="h1-nouvelle-liste">
+    <h1 class="nouvelle-liste">Nouvelle Liste </h1>
+  </div>
+  <div class="formulaire-div-parente">
+    <div class="formulaire-new-list">
+      <%= simple_form_for @list do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit "Valider",class: "bouton-de-formulaire-liste"%>
+        <% end %>
+    </div>
+  </div>
+</div>
