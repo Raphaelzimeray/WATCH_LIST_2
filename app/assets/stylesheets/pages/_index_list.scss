@@ -28,18 +28,41 @@
 
 
 
-.photos-and-name-list{
-  width: 250px;
-  height: 250px;
+.link-index{
+  display: flex;
+  flex-direction: column;
 }
 
 .image-list{
   width: 100%;
   border-radius: 8px;
+  height: 220px;
+  width: 200px;
 }
 
 .div-de-la-photo-et-du-nom-de-la-liste{
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  margin-bottom: 40px;
+  height: 350px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.creation-de-la-liste{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.nom-de-la-liste-index{
+  display: flex;
+  justify-content: center;
+}
+
+.bouton-supprimer-index{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
