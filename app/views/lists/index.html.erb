@@ -5,12 +5,21 @@
 
   <div class="div-de-la-photo-et-du-nom-de-la-liste">
     <% @lists.each do |list| %>
-      <%= link_to list_path(list), class:'link-index' do %>
-      <div class="photos-and-name-list">
-        <%= list.name %>
-          <%= cl_image_tag list.photo.key, class:"image-list"%>
-      </div>
+        <%= link_to list_path(list), class:'link-index' do %>
+        <div class="photos-and-name-list">
+          <%= list.name %>
+            <%= cl_image_tag list.photo.key, class:"image-list"%>
+            <%= link_to "Supprimer la liste",
+              list_path(list),
+              method: :delete,
+              data: { confirm: "Are you sure?"},
+              class:"btn btn-dark" %>
+        </div>
       <% end %>
     <% end %>
+  </div>
+
+  <div class="creation-de-la-liste">
+    <%= link_to "Créez une nouvelle liste", new_list_path, class: "btn btn-dark" %>
   </div>
 </div>
