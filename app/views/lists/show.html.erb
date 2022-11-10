@@ -18,8 +18,16 @@
               bookmark_path(bookmark),
               method: :delete,
               data: { confirm: "Are you sure?"},
-              class:"btn btn-primary" %>
+              class:"btn btn-dark" %>
           <% end %>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="aller-sur-la-creation-d1-avis">
+        <%= link_to "Rédigez un avis",
+           new_list_bookmark_path(@list),
+           class:"btn btn-dark"
+         %>
       </div>
     </div>
 </div>
