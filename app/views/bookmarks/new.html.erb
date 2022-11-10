@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="h1-nouveau-bookmark">
+    <h1 class="nouveau-bookmark"> Nouveau Bookmarks</h1>
+  </div>
+    <%= simple_form_for [ @list, @bookmark ] do |f| %>
+      <%= f.input :comment %>
+      <%= f.input :movie, collection: Movie.all %>
+      <%= f.button :submit,  class: "btn btn-dark" %>
+    <% end %>
+
+</div>
